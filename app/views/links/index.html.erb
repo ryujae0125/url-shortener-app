@@ -1,0 +1,20 @@
+
+<section>
+  <div class="row">
+
+    <% @links.each do |link| %>
+     <a href="/show/<%= link.id %>">
+      <div class="col-sm-4">
+        <div class="link_single">
+          <h2 class="link_header">Link ID: <%= link.id %></h2>
+          <p>Slug: /<%= link.slug %></p>
+          <p>Target_url: <%= link.target_url %></p>
+
+        </div>
+      </div>
+    <% end %>
+
+  </div>
+</section>
+
+<%= link_to "Add New Link", "/new", class: "btn btn-info" %>
